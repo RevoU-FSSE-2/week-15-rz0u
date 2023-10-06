@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import applyMiddleware from "./middleware/index.js";
 import { useRouter } from "./routes/method.js";
-import { useRouter } from "./routes/security.js";
+import { securityRouter } from "./routes/security.js";
 
 dotenv.config();
 
