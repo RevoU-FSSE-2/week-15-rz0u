@@ -1,14 +1,11 @@
 import express from "express";
 import dotenv from "dotenv";
-import { uuid } from "uuid";
 import cors from "cors";
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
-
-app.use(express.json());
 
 // x-request-id
 app.use((req, res, next) => {
