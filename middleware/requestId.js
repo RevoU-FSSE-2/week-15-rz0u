@@ -1,6 +1,6 @@
-import { uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
-export default requestId = (req, res, next) => {
+const requestId = (req, res, next) => {
   if (req.headers["x-request-id"]) {
     res.setHeader("x-request-id", req.headers["x-request-id"]);
     req.request_id = req.headers["x-request-id"];
@@ -11,3 +11,5 @@ export default requestId = (req, res, next) => {
   }
   next();
 };
+
+export default requestId;
